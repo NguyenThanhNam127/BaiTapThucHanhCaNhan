@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
     <TextView
@@ -13,25 +14,20 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:text="Demo Cycle Life"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:textStyle="normal|bold"
         android:textColor="@android:color/holo_green_dark"
-        android:textSize="30sp"/>
+        android:textSize="30sp"
+        android:textStyle="normal|bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/btnCall"
+        android:id="@+id/btnOK"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
         android:text="CALL DIALOG"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        android:layout_gravity="center horizontal"
         android:textSize="24sp"
-        />
+        tools:layout_editor_absoluteX="107dp"
+        tools:layout_editor_absoluteY="87dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

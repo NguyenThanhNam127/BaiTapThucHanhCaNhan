@@ -17,7 +17,7 @@ public class Subactivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_subactivity);
-        btnOk = findViewById(R.id.btnCall);
+        btnOk = findViewById(R.id.btnOK);
         btnOk.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
