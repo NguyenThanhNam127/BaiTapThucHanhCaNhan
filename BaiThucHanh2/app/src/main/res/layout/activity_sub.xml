@@ -6,23 +6,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".SubActivity">
 
     <TextView
-        android:id="@+id/txt1"
+        android:id="@+id/txt2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="Demo Cycle Life"
-        android:textColor="#FF9800"
-        android:textSize="30sp" />
+        android:text="Chao lop CR424"
+        android:textSize="18sp" />
 
     <Button
-        android:id="@+id/btn_call"
+        android:id="@+id/btn_ok"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="CALL DIALOG"
-        android:textSize="24sp" />
-
+        android:text="OK"
+        android:textSize="18sp" />
 </LinearLayout>
