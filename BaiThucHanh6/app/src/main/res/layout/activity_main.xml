@@ -36,9 +36,11 @@
 
             <EditText
                 android:id="@+id/edt_hoten"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:ems="10"
+                android:layout_weight="1"
+
                 android:inputType="text" />
         </TableRow>
 
@@ -56,10 +58,10 @@
 
             <EditText
                 android:id="@+id/edt_cmnd"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:ems="10"
-
+                android:layout_weight="1"
                 android:inputType="text" />
         </TableRow>
 
@@ -112,7 +114,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="horizontal">
 
         <CheckBox
@@ -136,5 +138,30 @@
             android:layout_weight="1"
             android:text="Đọc coding" />
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#2196F3"
+        android:gravity="center"
+        android:text="Thông tin bổ sung"
+        android:textColor="#FFEB3B"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/edt_bosung"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text" />
+
+    <Button
+        android:id="@+id/btn_gui"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="Gửi thông tin" />
 
 </LinearLayout>
