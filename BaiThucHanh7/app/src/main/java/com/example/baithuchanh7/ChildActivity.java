@@ -1,6 +1,5 @@
 package com.example.baithuchanh7;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.*;
@@ -10,21 +9,20 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class MainActivity extends AppCompatActivity {
-    Button btn_open;
+public class ChildActivity extends AppCompatActivity {
+    Button btn_back;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_child);
 
-        btn_open = findViewById(R.id.btn_open);
+        btn_back = findViewById(R.id.btn_back);
 
-        btn_open.setOnClickListener(new View.OnClickListener() {
+        btn_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent myintent = new Intent(MainActivity.this, ChildActivity.class);
-                startActivity(myintent);
+                finish();
             }
         });
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {

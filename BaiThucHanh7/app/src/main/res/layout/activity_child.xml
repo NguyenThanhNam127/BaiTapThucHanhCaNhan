@@ -6,27 +6,25 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".ChildActivity">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:layout_weight="1"
-        android:background="#4CAF50"
+        android:background="#FFEB3B"
         android:gravity="center"
-        android:text="This is main ativity"
-        android:textColor="#FFEB3B"
+
+        android:text="This is Child Activity"
+        android:textColor="#4CAF50"
         android:textSize="30sp" />
 
     <Button
-        android:id="@+id/btn_open"
+        android:id="@+id/btn_back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_weight="1"
         android:backgroundTint="#009688"
-        android:gravity="center"
-        android:text="Open child activity" />
-
+        android:text="Back to Main Activity" />
 </LinearLayout>
