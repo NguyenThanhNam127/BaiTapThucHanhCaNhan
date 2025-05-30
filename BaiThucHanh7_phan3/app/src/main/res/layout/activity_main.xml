@@ -11,12 +11,34 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Giải phương trình bậc 1"
-        android:textAlignment="center" />
+        android:text="Hello World!"
+        android:textAlignment="center"
+        android:textColor="#F60002" />
 
     <TableLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent"
+        android:textAlignment="center">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Nhập A:" />
+
+            <EditText
+                android:id="@+id/edtnhapa"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:ems="10"
+                android:inputType="text" />
+        </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
@@ -27,21 +49,15 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Nhập a:" />
+                android:text="Nhập B:" />
 
             <EditText
-                android:id="@+id/edta"
+                android:id="@+id/edtnhapb"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
-                android:backgroundTint="#0286DD"
                 android:ems="10"
                 android:inputType="text" />
-
-            <Space
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
         </TableRow>
 
         <TableRow
@@ -53,26 +69,20 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Nhập b:" />
+                android:text="Kết quả:" />
 
             <EditText
-                android:id="@+id/edtb"
+                android:id="@+id/edtkq"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
-                android:backgroundTint="#0286DD"
                 android:ems="10"
                 android:inputType="text" />
-
-            <Space
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+            android:layout_height="match_parent">
 
             <Space
                 android:layout_width="0dp"
@@ -80,11 +90,11 @@
                 android:layout_weight="1" />
 
             <Button
-                android:id="@+id/btnkq"
+                android:id="@+id/btnyckq"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
-                android:text="Kết quả" />
+                android:text="Yêu cầu kết quả" />
 
             <Space
                 android:layout_width="0dp"

@@ -4,7 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,35 +12,49 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class MainActivity extends AppCompatActivity {
-    EditText edta, edtb;
-    Button btnkq;
+import java.text.DecimalFormat;
+
+public class ResultActivity extends AppCompatActivity {
+    TextView txtkq;
+    Button btnback;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_result);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-        edta = findViewById(R.id.edta);
-        edtb = findViewById(R.id.edtb);
-        btnkq = findViewById(R.id.btnkq);
+        txtkq = findViewById(R.id.txtkq);
+        btnback = findViewById(R.id.btnback);
 
-        btnkq.setOnClickListener(new View.OnClickListener() {
+        Intent yourintent = getIntent();
+        Bundle yourbundle = yourintent.getBundleExtra("mybackage");
+        int a = yourbundle.getInt("soa");
+        int b = yourbundle.getInt("sob");
+
+        String kq = "";
+        if(a == 0 && b == 0 ){
+            kq = "Phuong trinh vo so nghiem";
+        }
+        else if(a == 0 && b != 0){
+            kq = "Vo nghiem";
+        }
+        else {
+            DecimalFormat dcf = new DecimalFormat("0.##");
+            kq = dcf.format(-b*1.0 / a);
+        }
+        txtkq.setText(kq);
+
+        btnback.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent1 = new Intent(MainActivity.this,ResultActivity.class);
-                Bundle bundle1 = new Bundle();
-                int a = Integer.parseInt(edta.getText()+"");
-                int b = Integer.parseInt(edtb.getText()+"");
-                bundle1.putInt("soa", a);
-                bundle1.putInt("sob",b);
-                intent1.putExtra("mybackage",bundle1);
-                startActivity(intent1);
+                finish();
             }
         });
+
+
     }
 }
