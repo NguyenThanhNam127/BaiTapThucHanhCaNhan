@@ -6,19 +6,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity" >
+    android:scrollbarSize="22sp"
+    tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/btncall"
+    <TextView
+        android:id="@+id/txt1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Call Phone"
-        android:textColor="#0BAD0C" />
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:text="Điện thoại được chọn"
+        android:textAlignment="center"
+        android:textSize="22sp" />
 
-    <Button
-        android:id="@+id/btnsms"
+    <ListView
+        android:id="@+id/lv1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="SEND SMS"
-        android:textColor="#0BAD0C" />
+        android:layout_height="match_parent" />
+
 </LinearLayout>
+
